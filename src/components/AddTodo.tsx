@@ -13,7 +13,7 @@ export function AddTodo() {
       newTodo,
     }))
 
-		console.log(`Add ${newTodo}`)
+    setNewTodo('')
 	}
 
   return (
