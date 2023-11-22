@@ -1,8 +1,11 @@
+import { palyer } from './slices/player';
 import { configureStore } from '@reduxjs/toolkit';
 import { TypedUseSelectorHook, useSelector } from 'react-redux';
 
 export const store = configureStore({
-  reducer: {  },
+  reducer: { 
+    palyer
+  },
 });
 
 export type RootState = ReturnType<typeof store.getState>
