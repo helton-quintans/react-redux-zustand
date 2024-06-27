@@ -3,13 +3,21 @@ import { Header } from '../components/Hearder'
 import { Module } from '../components/Module'
 import { Video } from '../components/Video'
 
+import { useEffect } from 'react'
 import BgImg from '../assets/bg1.avif'
 import { useAppSelector } from '../store'
+import { useCurrentLesson } from '../store/slices/player'
 
 export function Player() {
   const modules = useAppSelector((state) => {
     return state.palyer.course.modules
   })
+
+  const { currentLesson } = useCurrentLesson()
+
+  useEffect(() => {
+    document.title = `Assistindo: ${currentLesson.title}`
+  }, [currentLesson])
 
   return (
     <div
