@@ -1,7 +1,7 @@
 import { MessageCircle } from 'lucide-react'
 import { Header } from '../components/Hearder'
-import { Video } from '../components/Video'
 import { Module } from '../components/Module'
+import { Video } from '../components/Video'
 
 import BgImg from '../assets/bg1.avif'
 import { useAppSelector } from '../store'
