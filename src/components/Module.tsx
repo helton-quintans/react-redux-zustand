@@ -32,7 +32,11 @@ export function Module({ moduleIndex, title, amountOfLessons }: ModuleProps) {
         <nav className="relative flex flex-col gap-4 p-6">
           {lessons.map((lesson) => {
             return (
-              <Lesson title={lesson.title} duration={lesson.duration} />
+              <Lesson 
+                key={lesson.id} 
+                title={lesson.title} 
+                duration={lesson.duration} 
+              />
             )
           })}
         </nav>
